@@ -1,8 +1,7 @@
 import openai
 import os
 
-secret_key="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"
-openai.api_key = secret_key
+openai.api_key = '<api_key>'
 
 def summ():
     with open('messages.csv') as f:
@@ -24,4 +23,4 @@ def summ():
     message = completion.choices[0].text
     return message
 
-#print(summ())
+print(summ())

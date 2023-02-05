@@ -1,6 +1,5 @@
 import os
 import discord
-import os
 from discord.ext import commands
 import time_logic as tl
 import openai1 as gpt
@@ -55,7 +54,7 @@ def run():
     with open('messages.csv', 'w', newline='') as file:
       writer = csv.writer(file)
       async for message in channel.history(before=before, after=after):
-        if message.author == client.user or "!summarize" in message.clean_content or dict.get(message.author.name,None)==True or "!ignore" in message.clean__content or "!reinclude" in message.clean_content:
+        if message.author == client.user or "!summarize" in message.clean_content or dict.get(message.author.name,None)==True or "!ignore" in message.clean_content or "!reinclude" in message.clean_content:
           continue
         writer.writerow([message.author.name, message.clean_content])
         #await ctx.send(f"[{str(message.created_at)[11:16]}] {message.author.name}: {message.clean_content}")
